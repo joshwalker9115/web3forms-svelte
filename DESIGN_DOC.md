@@ -2,6 +2,7 @@
 
 ## Web3Forms-Svelte
 June 24, 2023
+>
 Joshua Walker - https://github.com/joshwalker9115
 
 ---
@@ -12,17 +13,14 @@ Web3Forms-Svelte is a svelte component/wrapper for the standard use cases of Web
 ---
 ## Principles
 
-- Simplicity
-The basic use of the form should be as easy as inserting the component. Styling should fall right in line.
+- Simplicity - The basic use of the form should be as easy as inserting the component. Styling should fall right in line.
 
-- Control
-When needed, the component should allow full without jumping through hoops.
+- Control - When needed, the component should allow full without jumping through hoops.
 
-- Type Safety
-Full TypeScript support.
+- Type Safety - Full TypeScript support.
 
 ---
-## Design
+## Design/Reference
 
 - Standard Fields - These fields are applied if no default slot is provided:
     - `Name`
@@ -30,7 +28,7 @@ Full TypeScript support.
     - `Message`
     - `Submit`
 >
-- Custom Fields - Just wrap your from in a `svelte:fragment`
+- Custom Fields - Just wrap your from in a `<svelte:fragment>`
 - Required Props - The only required prop is the API key `apikey`, available at [Web3Forms](https://web3forms.com/)
 
 - Optional Props
@@ -41,6 +39,8 @@ Full TypeScript support.
             - Custom function call on form submission failure.
         - `inputClass`
             - If only using standard fields and you already have a global style class for your inputs, pass it to this prop to apply it to the standard fields.
+        - `formClass`
+            - Similar to `inputClass` but applies over the containing form.
         - `status`
             - Control over a status message is available via this prop. Without passing anything to this prop it will display "Submitting..." and then standard API response, depending upon success or failure.
         - `disableStatus`
@@ -57,7 +57,9 @@ Full TypeScript support.
         - `from_name`
             - The default From Name is "Notifications" but you can customize it with this prop.
 - Styling
-    - `input` will pass a class to all inputs. This is useful if you have a global stylesheet with styling for inputs.
+    - `inputClass` will pass a class to all inputs. This is useful if you have a class from a global stylesheet with styling for inputs.
+    - `formClass` will pass a class to form containing the inputs.
+    - Styling is available to the containing form via `W3F__Form`.
     - Styling is available over all standard fields via `W3F__Inputs`. This can be targeted as a global css class:
         ```
         :global(.W3F__Inputs) {
@@ -84,4 +86,10 @@ Full TypeScript support.
         - `W3F__Message`
         - `W3F__Submit`
         - `W3F__Status`
-    - Custom Fields can be styled 
+    - Custom Fields can be styled normally within the `<svelte:fragment>`
+---
+<!-- Demo / Examples section once complete -->
+## Thanks and Acknoledgement
+- [Web3Forms](https://web3forms.com/) - API making this possible
+- [Lalit2005](https://github.com/Lalit2005) - Original author of use-Web3Forms, inspiration for this component
+- [surjithctly](https://github.com/surjithctly) - Bringing the web3forms react plugin to Web3Forms Docs

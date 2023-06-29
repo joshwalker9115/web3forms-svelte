@@ -25,6 +25,7 @@
 	export let disableStatus = false;
 	export let honeypot = true;
 	export let inputClass = '';
+	export let formClass = '';
 	export let redirect = '';
 	export let subject = '';
 	export let status = '';
@@ -58,7 +59,7 @@
 	};
 </script>
 
-<form on:submit|preventDefault={handleSubmit}>
+<form on:submit|preventDefault={handleSubmit} class="W3F__Form {formClass}">
 	{#if honeypot}
 		<input type="checkbox" name="botcheck" class="W3F__Honeypot" style="display: none;" />
 	{/if}
@@ -80,28 +81,25 @@
 			name="name"
 			required
 			placeholder="Name"
-			class="W3F__Name W3F__Inputs"
-			class:input={inputClass}
+			class="W3F__Name W3F__Inputs {inputClass}"
 		/>
 		<input
 			type="email"
 			name="email"
 			required
 			placeholder="Email"
-			class="W3F__Email W3F__Inputs"
-			class:input={inputClass}
+			class="W3F__Email W3F__Inputs {inputClass}"
 		/>
 		<textarea
 			name="message"
 			required
 			rows="3"
 			placeholder="Your message..."
-			class="W3F__Message W3F__Inputs"
-			class:input={inputClass}
+			class="W3F__Message W3F__Inputs {inputClass}"
 		/>
 	{/if}
 	<slot />
-	<input class="W3F__Submit W3F__Inputs" type="submit" class:input={inputClass} />
+	<input class="W3F__Submit {inputClass}" type="submit" />
 </form>
 {#if !disableStatus}
 	<div class="W3F__Status">{status}</div>

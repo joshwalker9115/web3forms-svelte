@@ -7,17 +7,17 @@
 		"web3forms"
 	],
 	"license": "MIT",
-	"version": "0.2.0",
+	"version": "0.3.1",
 	"files": [
 		"./*"
 	],
 	"exports": {
 		"./Web3Form.svelte": {
-			"types": "./dist/Web3Form.svelte.d.ts",
-			"svelte": "./dist/Web3Form.svelte"
+			"types": "./Web3Form.svelte.d.ts",
+			"svelte": "./Web3Form.svelte"
 		}
 	},
-	"svelte": "./dist/Web3Form.svelte",
+	"svelte": "./Web3Form.svelte",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "svelte-kit sync && svelte-package",

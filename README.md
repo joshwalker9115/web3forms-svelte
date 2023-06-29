@@ -22,7 +22,7 @@ Recieve form submissions directly to your inbox without any configuration. Power
 
 ## Demo
 
-Soon to come!
+Checkout the demo in the [Svelte REPL](https://svelte.dev/repl/9755e377825d4d46bbbca3f70ed7c8b6?version=4.0.1)
 
 
 ## Installation
@@ -42,13 +42,14 @@ yarn add web3forms-svelte
 
 ```svelte
 <script>
-	import Web3Form from '$lib/Web3Form.svelte';
+	import Web3Form from 'web3forms-svelte';
 </script>
 
 <Web3Form apikey="your-api-key-goes-here" />
 ```
-For the full guide to props & usage checkout the [Design Doc](https://github.com/joshwalker9115/web3forms-svelte/tree/master/DESIGN_DOC.md)
-For other examples please look into the [src/lib](https://github.com/joshwalker9115/web3forms-svelte/tree/master/src/lib/) directory.
+For the full guide to props & usage checkout the [Design Doc](https://github.com/joshwalker9115/web3forms-svelte/tree/main/DESIGN_DOC.md).
+
+<!-- For other examples please look at the [example page](https://github.com/joshwalker9115/web3forms-svelte/tree/main/src/routes/+page.svelte). -->
 
 ---
 ## FAQ ❓
@@ -57,7 +58,8 @@ For other examples please look into the [src/lib](https://github.com/joshwalker9
 You should get your Access key from [Web3forms](https://web3forms.com/) which requires your email.
 
 #### How many form submissions can I make?  
-Web3forms has a generous free plan. You can view the latest pricing [here](https://web3forms.com/#pricing)
+Web3forms has a generous free plan. You can view the latest pricing [here](https://web3forms.com/#pricing).
+
 ## Run Locally
 
 Clone the project
@@ -87,7 +89,7 @@ Start the server
 ```bash
 npm run dev
 ```
-
+or
 ```bash
 yarn dev
 ```

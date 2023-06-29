@@ -5,7 +5,7 @@
 <Web3Form apikey="your-api-key-goes-here" />
 
 <style>
-	:global(.W3F__Inputs) {
+	:global(.W3F__Inputs, .W3F__Submit) {
 		display: block;
 		margin: 1rem;
 	}
